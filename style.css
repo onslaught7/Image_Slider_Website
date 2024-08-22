@@ -11,7 +11,6 @@ body{
 
 a{
     text-decoration: none;
-    color: white;
 }
 
 header{
@@ -27,6 +26,7 @@ header{
 
 header a{
   margin-right: 40px;  
+  color: white;
 }
 
 /* carousel */
@@ -39,6 +39,8 @@ header a{
 }
 
 .carousel .list .item{
+    width: 100%;
+    height: 100%;
     position: absolute;
     /* it is the same as giving 0 to left, top, right and bottom  */
     inset: 0 0 0 0;
@@ -51,5 +53,81 @@ header a{
 }
 
 .carousel .list .item .content{
-    
+    position: absolute;
+    top: 20%;
+    width: 65%;
+    max-width: 80%;
+    /* the below two line make the content center aligned, specially used in cases of absolute positioned elements  */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    /* includes the content, padding and border, the contenmt area is automatically adjustedd so widht remains exactly 65% */
+    /* without this the width = 65% + padding-rigth = 30% would make the whole thing take a width of 95% */
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #000;
+}
+
+.carousel .list .item .content .author {
+    font-weight: bold;
+    letter-spacing: 6px;
+    font-size: 1.5rem;
+}
+
+.carousel .list .item .content .author1{
+    color: rgb(32, 8, 53);
+}
+
+.carousel .list .item .content .author2{
+    color: rgb(218, 102, 24);
+}
+
+.carousel .list .item .content .author3{
+    color: rgb(124, 26, 204);
+}
+
+.carousel .list .item .content .author4{
+    color: rgb(204, 26, 26);
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-weight: bold;
+    font-size: 5em;
+    /* line-height: 4rem; */
+}
+
+.carousel .list .item .topic{
+    color: #ff9705
+}
+
+.carousel .list .item .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: 40px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .content button:nth-child(1){
+    border: 3px solid #ff9705;
+    background-color: #ff9705;
+    color: black;
+    font-family: Poppins;
+    font-weight: 800;
+    letter-spacing: 4px;
+    border-radius: 0.5rem;
+    font-size: large;
+}
+
+.carousel .list .item .content button:nth-child(2){
+    border: 3px solid #ff9705;
+    background-color: transparent;
+    color: #ff9705;
+    font-family: Poppins;
+    font-weight: 800;
+    letter-spacing: 4px;
+    border-radius: 0.5rem;
+    font-size: large;
+    text-shadow: 0 4px 6px #000
 }
