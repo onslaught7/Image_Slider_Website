@@ -97,6 +97,11 @@ header a{
     /* line-height: 4rem; */
 }
 
+.carousel .list .item .des{
+    /* font-weight: bold; */
+    font-size: 1.2em;
+}
+
 .carousel .list .item .topic{
     color: #ff9705
 }
@@ -210,5 +215,9 @@ header a{
 .arrows button:hover{
     background-color: #ff9705;
     scale: 1.1;
+}
+
+.carousel .list .item:nth-child(1){
+    z-index: 1;
 }
 
