@@ -79,7 +79,7 @@ header a{
 }
 
 .carousel .list .item .content .author2{
-    color: rgb(218, 102, 24);
+    color: rgba(255, 115, 0, 0.925);
 }
 
 .carousel .list .item .content .author3{
@@ -241,16 +241,16 @@ header a{
 }
 
 .carousel .list .item:nth-child(1) .title{
-    animation-delay: 1.4s;
+    animation-delay: 0.4s;
 }
 
 .carousel .list .item:nth-child(1) .topic{
-    animation-delay: 1.8s;
+    animation-delay: 0.8s;
 }
 
 .carousel .list .item:nth-child(1) .des,
 .carousel .list .item:nth-child(1) .buttons{
-    animation-delay: 2s;
+    animation-delay: 1.2s;
 }
 
 /* image switching effect */
@@ -299,5 +299,52 @@ header a{
     }
 }
 
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
 
+.carousel.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    animation: outImage .5s linear 1 forwards;
+}
 
+@keyframes outImage{
+    to{
+        width: 150px;
+        height: 220px;
+        left: 50%;
+        bottom: 50px;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .buttons{
+    animation: contentOut 0.5s linear forwards;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* to make sure the buttons are disabled throughout the animation process once the user clicks it  */
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none ;
+}
