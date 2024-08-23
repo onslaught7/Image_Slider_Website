@@ -14,7 +14,7 @@ a{
 }
 
 header{
-    width: 65%;
+    width: 1140px;
     max-width: 80%;
     margin: auto;
     height: 50px;
@@ -55,7 +55,7 @@ header a{
 .carousel .list .item .content{
     position: absolute;
     top: 20%;
-    width: 65%;
+    width: 1140px;
     max-width: 80%;
     /* the below two line make the content center aligned, specially used in cases of absolute positioned elements  */
     left: 50%;
@@ -347,4 +347,38 @@ header a{
 .carousel.next .arrows button,
 .carousel.prev .arrows button{
     pointer-events: none ;
+}
+
+/* time duration bar  */
+.time{
+    width: 0%;
+    height: 3px;
+    background-color: #ff9705;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    width: 100%;
+    animation: runningTime 10s linear 1 forwards;
+}
+
+@keyframes runningTime{
+    to{
+        width: 0;
+    }
+}
+
+/* making it a bit responsive for phones  */
+@media screen and (max-width: 678px){
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title,
+    .carousel .list .item .content .topic{
+        font-size: 30px;
+    }
 }
