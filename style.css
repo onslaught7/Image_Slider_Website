@@ -26,7 +26,8 @@ header{
 
 header a{
   margin-right: 40px;  
-  color: white;
+  color: #000000;
+  font-size: large;
 }
 
 /* carousel */
@@ -75,15 +76,15 @@ header a{
 }
 
 .carousel .list .item .content .author1{
-    color: rgb(32, 8, 53);
+    color: rgb(59, 0, 110);
 }
 
 .carousel .list .item .content .author2{
-    color: rgba(255, 115, 0, 0.925);
+    color: rgba(0, 89, 255, 0.925);
 }
 
 .carousel .list .item .content .author3{
-    color: rgb(124, 26, 204);
+    color: rgb(255, 153, 0);
 }
 
 .carousel .list .item .content .author4{
@@ -103,7 +104,7 @@ header a{
 }
 
 .carousel .list .item .topic{
-    color: #ff9705
+    color: #d8c694
 }
 
 .carousel .list .item .content .buttons{
@@ -115,25 +116,25 @@ header a{
 }
 
 .carousel .list .item .content button:nth-child(1){
-    border: 3px solid #ff9705;
-    background-color: #ff9705;
+    border: 3px solid #d8c694;
+    background-color: #d8c694;
     color: black;
     font-family: Poppins;
     font-weight: 800;
     letter-spacing: 4px;
     border-radius: 0.5rem;
-    font-size: large;
+    font-size: medium;
 }
 
 .carousel .list .item .content button:nth-child(2){
-    border: 3px solid #ff9705;
+    border: 3px solid #d8c694;
     background-color: transparent;
-    color: #ff9705;
+    color: #d8c694;
     font-family: Poppins;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     border-radius: 0.5rem;
-    font-size: large;
+    font-size: medium;
     text-shadow: 0 4px 6px #000
 }
 
@@ -177,7 +178,7 @@ header a{
 
 .thumbnail .item .content .description{
     font-weight: 600;
-    color: #ff9705;
+    color: #d8c694;
     letter-spacing: 1px;
 }
 
@@ -214,7 +215,7 @@ header a{
 } */
 
 .arrows button:hover{
-    background-color: #ff9705;
+    background-color: #d8c694;
 }
 
 .carousel .list .item:nth-child(1){
@@ -350,10 +351,10 @@ header a{
 }
 
 /* time duration bar  */
-.time{
+/* .time{
     width: 0%;
     height: 3px;
-    background-color: #ff9705;
+    background-color: #d8c694;
     position: absolute;
     z-index: 100;
     top: 0;
@@ -370,7 +371,7 @@ header a{
     to{
         width: 0;
     }
-}
+} */
 
 /* making it a bit responsive for phones  */
 @media screen and (max-width: 678px){
